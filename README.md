@@ -1,7 +1,7 @@
 # MW-AHRSv1-RS232-communicate
 MW-AHRSv1 about RS232 communicate on qt c++, ros kinetic
 
-![img](http://www.devicemart.co.kr/skin/goods/large/1310790.jpg “mw_ahrs”)
+<img width="200" src="http://www.devicemart.co.kr/skin/goods/large/1310790.jpg">
 
 ### 소개
 안녕하세요. MW-AHRSv1 imu센서를 RS232 텍스트로 받아오는 것을 해보았습니다. 추가로 ROS에서 메세지를 보내는 것 까지 확인하였습니다.
