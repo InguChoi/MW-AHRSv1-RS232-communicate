@@ -24,7 +24,7 @@ Compiler: QT
 mw_ahrsv1.cpp 파일은 MW_AHRS클래스가 있는 파일이고 통신을 하는 기본적인 코드가 구현이 되어있습니다.
 Serial.cpp 파일은 C코드로 구현된 시리얼 통신을 할 수 있는 기본적인 코드가 구현이 되어있습니다.
 
-#mw_ahrsv1.cpp
+# mw_ahrsv1.cpp
 ```c++
 #include "ros/ros.h"
 #include "Serial.h"
@@ -161,7 +161,7 @@ int main(int argc, char **argv)
 }
 ```
 
-#Serial.cpp
+# Serial.cpp
 ```c++
 /*
  * Serial.cpp
@@ -238,7 +238,7 @@ void sendMessage(char* text, int cnt, int fd)
 
 ```
 
-#Serial.h
+# Serial.h
 
 ```c++
 /*
