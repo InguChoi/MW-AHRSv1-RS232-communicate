@@ -1,22 +1,16 @@
-# MW-AHRSv1---RS232-communicate
+# MW-AHRSv1-RS232-communicate
 MW-AHRSv1 about RS232 communicate on qt c++, ros kinetic
 
+### 소개
 안녕하세요. MW-AHRSv1 imu센서를 RS232 텍스트로 받아오는 것을 해보았습니다. 추가로 ROS에서 메세지를 보내는 것 까지 확인하였습니다.
 웹상에서 RS232를 통해서 데이터 값을 받아오는 자료가 많이 없어서 제 깃 허브에 공유합니다.
 코드는 QT로 C++언어로 구현했고 Ubuntu 16.04, ROS Kinetic버전입니다.
-
-Hello. MW-AHRSv1 imu sensor to RS232 Text-to-speech and hacker. More information is available through the ROS.
-Use a hub to obtain data using RS232 on the web.
-Ubuntu 16.04, which implements the C ++ language with QT, is the ROS kinetic version.
 
 운영체제 : 우분투 16.04
 소프트웨어 : ROS Kinetic
 컴파일러 : QT
 
-Operating System: Ubuntu 16.04
-Software: ROS Kinetic
-Compiler: QT
-
+## 구성
 총 두 개의 파일로 나뉘어져 있습니다.
 1. mw_ahrsv1.cpp (헤더파일 x)
 2. Serial.cpp (헤더파일 o)
@@ -24,7 +18,34 @@ Compiler: QT
 mw_ahrsv1.cpp 파일은 MW_AHRS클래스가 있는 파일이고 통신을 하는 기본적인 코드가 구현이 되어있습니다.
 Serial.cpp 파일은 C코드로 구현된 시리얼 통신을 할 수 있는 기본적인 코드가 구현이 되어있습니다.
 
-# mw_ahrsv1.cpp
+### ROS 관련 내용
+노드 이름은 my_ahrsv1이고, 패키지 이름 또한 my_ahrsv1으로 같습니다.
+실행하실 때 roscore를 먼저 켜주시고, rosrun my_ahrsv1 my_ahrsv1 명령어를 통해서 노드를 켜주시길 바랍니다.
+
+
+### Introduce
+Good morning. I tried to import the MW-AHRSv1 imu sensor as RS232 text. We have also confirmed that we are sending messages from ROS.
+There is not much data to receive data value through RS232 on the web, so it is shared with the github.
+The code is implemented in the C ++ language as QT and is Ubuntu 16.04, ROS Kinetic version.
+
+Operating System: Ubuntu 16.04
+Software: ROS Kinetic
+Compiler: QT
+
+## Configuration
+It is divided into two files in total.
+1. mw_ahrsv1.cpp (header file x)
+2. Serial.cpp (header file o)
+
+The mw_ahrsv1.cpp file is a file with the MW_AHRS class and has implemented basic code for communication.
+The serial.cpp file is implemented as basic code that enables serial communication implemented with C code.
+
+### About ROS
+The node name is my_ahrsv1, and the package name is also equal to my_ahrsv1.
+Please turn on roscore first and rosrun my_ahrsv1 my_ahrsv1 command.
+
+
+## mw_ahrsv1.cpp
 ```c++
 #include "ros/ros.h"
 #include "Serial.h"
@@ -161,7 +182,7 @@ int main(int argc, char **argv)
 }
 ```
 
-# Serial.cpp
+## Serial.cpp
 ```c++
 /*
  * Serial.cpp
@@ -238,7 +259,7 @@ void sendMessage(char* text, int cnt, int fd)
 
 ```
 
-# Serial.h
+## Serial.h
 
 ```c++
 /*
