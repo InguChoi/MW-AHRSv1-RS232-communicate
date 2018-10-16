@@ -46,6 +46,12 @@ The serial.cpp file is implemented as basic code that enables serial communicati
 The node name is my_ahrsv1, and the package name is also equal to my_ahrsv1.
 Please turn on roscore first and rosrun my_ahrsv1 my_ahrsv1 command.
 
+### First
+터미널 창에 "sudo chmod 777 /dev/ttyUSB0"을 입력합니다.
+write "sudo chmod 777 /dev/ttyUSB0" in terminal 
+
+sudo chmod 777 /dev/ttyUSB0 명령어는 센서를 인식하게 해주는 명령어 입니다.
+
 
 ## mw_ahrsv1.cpp
 ```c++
